@@ -1,0 +1,21 @@
+;                                                               sum of first n natural numbers
+sumN:
+    loop:   ldc num
+            ldnl 0      ; load num into A
+            ldc sum
+            ldnl 0     
+            add         
+            ldc sum
+            stnl 0      ; store new value of sum
+            ldc num
+            ldnl 0      
+            adc -1     
+            brz done    
+            ldc num
+            stnl 0      
+            br loop     
+    done:         
+            HALT      
+
+num: data 10       
+sum: data 0         

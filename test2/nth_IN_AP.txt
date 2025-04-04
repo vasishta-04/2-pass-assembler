@@ -1,0 +1,47 @@
+;                                                               nth term of an Arthimetic progression
+call multiply
+call addition
+HALT
+multiply:   stl 0
+            adj -1
+            ldc n
+            ldnl 0
+            adc -1
+            ldc n
+            stnl 0
+                
+    loop:   ldc n
+            ldnl 0      
+            ldc nth_term
+            ldnl 0     
+            add         
+            ldc nth_term
+            stnl 0     
+            ldc d
+            ldnl 0     
+            adc -1    
+            brz done    
+            ldc d
+            stnl 0      
+            br loop     
+    done:   
+            adj 1       
+            ldl 0       
+            return 
+addition:   stl 0
+            adj -1
+            ldc a
+            ldnl 0
+            ldc nth_term
+            ldnl 0
+            add
+            ldc nth_term
+            stnl 0
+            return
+
+
+
+n: data 3       ; number upto which nth_term is calculated
+d: data 4 
+a: data 012       ; a is 10 in octal format   
+nth_term: data 0        

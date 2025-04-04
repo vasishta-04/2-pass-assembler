@@ -1,0 +1,96 @@
+;                                                       gives number of roots for a*x^2 + b*x + c =0
+call discriminant
+HALT
+discriminant:   stl 0
+                adj -1
+                ldc b                   ;intializing b*b
+                ldnl 0
+                ldc temp2               ;loading b into temp2
+                stnl 0
+        loop1:  ldc b
+                ldnl 0
+                ldc temp1
+                ldnl 0
+                add
+                ldc temp1
+                stnl 0
+                ldc temp2
+                ldnl 0
+                adc -1
+                brz next1
+                ldc temp2
+                stnl 0
+                br loop1
+
+        next1:  ldc temp1               
+                ldnl 0
+                ldc b
+                stnl 0                  ;storing value of (b*b) in the adress of b
+                ldc 0
+                ldc temp1
+                stnl 0                   
+        loop2:  ldc a                   ;initializing a*c
+                ldnl 0      
+                ldc temp1
+                ldnl 0     
+                add         
+                ldc temp1
+                stnl 0     
+                ldc c
+                ldnl 0     
+                adc -1    
+                brz next2    
+                ldc c
+                stnl 0      
+                br loop2        
+
+        next2:  ldc temp1               
+                ldnl 0
+                ldc a
+                stnl 0                  ;storing value of (a*c) in the adress of a
+                ldc a
+
+                ldnl 0                  ;multiply a*c with 4 
+                ldc 2
+                shl
+                ldc a
+                stnl 0                  ;storing 4*a*c in adress of a
+
+                ldc b
+                ldnl 0
+                ldc a
+                ldnl 0
+                sub
+                ldc final_disc
+                stnl 0
+                ldc final_disc
+                ldnl 0
+                brlz no_roots
+                brz one_root
+                ldc no_of_roots
+                ldnl 0
+                adc 2
+                ldc no_of_roots
+                stnl 0
+                return
+no_roots:       ldc no_of_roots
+                ldnl 0
+                adc 0
+                ldc no_of_roots
+                stnl 0
+                return
+one_root:       ldc no_of_roots
+                ldnl 0
+                adc 1
+                ldc no_of_roots
+                stnl 0
+                return
+    
+
+a: data 1
+b: data 1       
+c: data 1           
+temp1: data 0               ;a temp address for storing calculations (result)
+temp2: data 0               ;a temp address for using in calculations
+final_disc: data 0
+no_of_roots: data 0

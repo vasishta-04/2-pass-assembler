@@ -1,0 +1,14 @@
+;                                                           testing for errors
+abc:
+0abc:
+ldc add 		
+data SET -10 	
+0XF 		;bogus mnemonic
+ldc 10 10 10 	
+adc adc 		;bogus label name
+loop: SET 100 	
+brz notthere 	;bogus label name
+brz br 			
+adj 		;improper operand
+0000000 		
+24 SET 			

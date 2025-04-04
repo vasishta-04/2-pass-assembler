@@ -1,0 +1,10 @@
+ldc a
+ldnl 0
+ldc b
+ldnl 0
+add
+ldc sum
+stnl 0
+a: data -013
+b: data -1
+sum: data 0

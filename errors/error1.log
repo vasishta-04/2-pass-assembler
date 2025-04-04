@@ -1,0 +1,11 @@
+In Line2 ERROR: not a valid Label name
+In Line3 ERROR: no such label
+In Line4 ERROR: extra on end of line
+In Line5 ERROR: Bogus Mnemonic(mnemonic not found)
+In Line6 ERROR: extra on end of line
+In Line7 ERROR: no such label
+In Line9 ERROR: no such label
+In Line10 ERROR: no such label
+In Line11 ERROR: Missing operand
+In Line12 ERROR: Bogus Mnemonic(mnemonic not found)
+In Line13 ERROR: Bogus Mnemonic(mnemonic not found)

@@ -1,0 +1,95 @@
+check_a:
+ldc max
+ldnl 0
+ldc a
+ldnl 0
+sub
+brlz a_max
+br check_b
+a_max:
+ldc a
+ldnl 0
+ldc max
+stnl 0
+
+check_b:
+ldc max
+ldnl 0
+ldc b
+ldnl 0
+sub
+brlz b_max
+br check_c
+b_max:
+ldc b
+ldnl 0
+ldc max
+stnl 0
+
+check_c:
+ldc max
+ldnl 0
+ldc c
+ldnl 0
+sub
+brlz c_max
+br check_d
+c_max:
+ldc c
+ldnl 0
+ldc max
+stnl 0
+
+check_d:
+ldc max
+ldnl 0
+ldc d
+ldnl 0
+sub
+brlz d_max
+br check_e
+d_max:
+ldc d
+ldnl 0
+ldc max
+stnl 0
+
+
+check_e:
+ldc max
+ldnl 0
+ldc e
+ldnl 0
+sub
+brlz e_max
+br check_f
+e_max:
+ldc e
+ldnl 0
+ldc max
+stnl 0
+
+check_f:
+ldc max
+ldnl 0
+ldc f
+ldnl 0
+sub
+brlz f_max
+br done
+f_max:
+ldc f
+ldnl 0
+ldc max
+stnl 0
+
+done: 
+HALT
+
+a: data 1
+b: data 2
+c: data 3
+d: data 4
+e: data 5
+f: data 6
+max: data 0
