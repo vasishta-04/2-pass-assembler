@@ -1,0 +1,8 @@
+TITLE: CLAIMS
+
+AUTHOR: EDAPALAPATI HEMANTH GUPTHA
+ROLL NO: 2301CS21
+
+**declaration of authorship**
+
+This files including claims.txt, is part of my mini-project of course CS2102, department of computer science and engineering, IIT PATNA.
