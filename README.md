@@ -14,6 +14,10 @@ Two Pass Assembler
     ◦  Nth term of an Arthematic Progression.
     
     ◦  Maximum element of an array.
+
+    ◦  Sum of First N natural numbers.
+
+    ◦  Sum of 2 given INTEGERS.
     
     ◦  Test case for Warnings.
     
